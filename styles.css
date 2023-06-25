@@ -1,0 +1,234 @@
+:root {
+  /********** STYLE GUIDE *********/
+
+  /************ COLORS ************/
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --darkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --lightGray: hsl(0, 0%, 98%);
+  --backgroundColor: #f2f2f2;
+
+  /********** FONT FAMILY **********/
+  --poppins: "Poppins", sans-serif;
+
+  /********** FONT WEIGHTS *********/
+  --fw200: 200;
+  --fw400: 400;
+  --fw600: 600;
+}
+
+/************* GENERAL *************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: var(--poppins);
+  font-size: 62.5%;
+  background: var(--backgroundColor);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/********* FEATURE SECTION *********/
+.feature-section {
+  margin: 8.5rem 3.2rem 7.8rem;
+  max-width: 37.5rem;
+}
+
+/********** TEXT CONTAINER *********/
+.text-container {
+  text-align: center;
+  margin-bottom: 7.6rem;
+}
+
+.first-header-text {
+  font-weight: var(--fw200);
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.166667px;
+  color: var(--darkBlue);
+  margin-bottom: 0.1rem;
+}
+
+.second-header-text {
+  font-weight: var(--fw600);
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.166667px;
+  color: var(--darkBlue);
+  margin-bottom: 1.3rem;
+}
+
+.feature-text {
+  font-weight: var(--fw400);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.104167px;
+  color: var(--darkBlue);
+  opacity: 0.5;
+}
+
+/**** CARDS FEATURES CONTAINER ****/
+.cards-features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/********** CARD CONTAINER *********/
+.card-container {
+  background: var(--lightGray);
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.slanted-edge-shape {
+  width: 100%;
+  height: 3.5px;
+  margin-bottom: 2.35rem;
+}
+
+.feature-info-container {
+  padding: 0 2.8rem 2.8rem;
+}
+
+.feature-name {
+  font-weight: var(--fw600);
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--darkBlue);
+  margin-bottom: 0.1rem;
+}
+
+.feature-paragraph {
+  font-weight: var(--fw400);
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.0902778px;
+  color: var(--darkBlue);
+  opacity: 0.5;
+  margin-bottom: 3.3rem;
+}
+
+.feature-icon {
+  display: block;
+  max-width: 5.7rem;
+  max-height: 5.7rem;
+  margin-left: auto;
+}
+
+/******* SLANTED EDGE COLORS *******/
+.cyan {
+  background: var(--cyan);
+}
+
+.red {
+  background: var(--red);
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.blue {
+  background: var(--blue);
+}
+
+/******** 1440p MEDIA QUERY ********/
+@media (min-width: 90em) {
+  /********* FEATURE SECTION ********/
+  .feature-section {
+    max-width: 144rem;
+    margin: 8rem 0;
+  }
+
+  /********* TEXT CONTAINER *********/
+  .text-container {
+    margin-bottom: 6.4rem;
+  }
+
+  .first-header-text {
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    letter-spacing: 0.25px;
+  }
+
+  .second-header-text {
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    letter-spacing: 0.25px;
+  }
+
+  .feature-text {
+    max-width: 54rem;
+    max-height: 5rem;
+    margin: 0 auto;
+  }
+
+  /**** CARDS FEATURES CONTAINER ****/
+  .cards-features-container {
+    display: grid;
+    max-width: 111rem;
+    max-height: 53rem;
+    grid-template-columns: repeat(1fr, 3);
+    gap: 3rem;
+  }
+
+  .cards-features-container .card-container:nth-child(1) {
+    grid-column: 1 / 2;
+    transform: translateY(14rem);
+  }
+
+  .cards-features-container .card-container:nth-child(2) {
+    grid-column: 2 / 3;
+  }
+
+  .cards-features-container .card-container:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+
+  .cards-features-container .card-container:nth-child(4) {
+    grid-column: 3 / 4;
+    transform: translateY(-14rem);
+  }
+
+  /********* CARD CONTAINER *********/
+  .card-container {
+    width: 35rem;
+    height: 25rem;
+  }
+
+  .slanted-edge-shape {
+    margin-bottom: 2.85rem;
+  }
+
+  .feature-info-container {
+    padding: 0 3.2rem 3.2rem;
+  }
+
+  .feature-name {
+    margin-bottom: 0.6rem;
+  }
+
+  .feature-paragraph {
+    margin-bottom: 4rem;
+  }
+
+  .feature-icon {
+    max-width: 6.4rem;
+    max-height: 6.4rem;
+  }
+}
